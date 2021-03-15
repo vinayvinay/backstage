@@ -49,6 +49,8 @@ describe('fetch:cookiecutter', () => {
       values: {
         help: 'me',
       },
+      copyWithoutRender: ['./github/workflows/*'],
+      extensions: ['jinja2_time.TimeExtension'],
     },
     baseUrl: 'somebase',
     workspacePath: mockTmpDir,
@@ -100,11 +102,17 @@ describe('fetch:cookiecutter', () => {
   it('should execute the cookiecutter templater with the correct values', async () => {
     await action.handler(mockContext);
 
+    const values = {
+      ...mockContext.input.values,
+      copyWithoutRender: ['./github/workflows/*'],
+      extensions: ['jinja2_time.TimeExtension'],
+    };
+
     expect(cookiecutterTemplater.run).toHaveBeenCalledWith({
       workspacePath: mockTmpDir,
       dockerClient: mockDockerClient,
       logStream: mockContext.logStream,
-      values: mockContext.input.values,
+      values,
     });
   });
 

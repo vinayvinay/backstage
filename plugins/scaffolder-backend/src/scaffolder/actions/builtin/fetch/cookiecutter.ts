@@ -37,6 +37,8 @@ export function createFetchCookiecutterAction(options: {
     url: string;
     targetPath?: string;
     values: JsonObject;
+    copyWithoutRender: JsonObject;
+    extensions: JsonObject;
   }>({
     id: 'fetch:cookiecutter',
     description:
@@ -63,6 +65,18 @@ export function createFetchCookiecutterAction(options: {
             description: 'Values to pass on to cookiecutter for templating',
             type: 'object',
           },
+          copyWithoutRender: {
+            title: 'Copy Without Render',
+            description:
+              'Avoid rendering directories and files in the template',
+            type: 'object',
+          },
+          extensions: {
+            title: 'Template Extensions',
+            description:
+              'Jinja2 extensions to add filters, tests, globals or extend the parser.',
+            type: 'object',
+          },
         },
       },
     },
@@ -86,12 +100,18 @@ export function createFetchCookiecutterAction(options: {
 
       const cookiecutter = templaters.get('cookiecutter');
 
+      const values = {
+        ...(ctx.input.values as TemplaterValues),
+        copyWithoutRender: ctx.input.copyWithoutRender,
+        extensions: ctx.input.extensions,
+      };
+
       // Will execute the template in ./template and put the result in ./result
       await cookiecutter.run({
         workspacePath: workDir,
         dockerClient,
         logStream: ctx.logStream,
-        values: ctx.input.values as TemplaterValues,
+        values,
       });
 
       // Finally move the template result into the task workspace
