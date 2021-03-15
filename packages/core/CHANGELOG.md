@@ -1,5 +1,13 @@
 # @backstage/core
 
+## 0.7.2
+
+### Patch Changes
+
+- 8686eb38c: Add a `ResponseErrorPanel` to render `ResponseError` from `@backstage/errors`
+- Updated dependencies [c8b54c370]
+  - @backstage/core-api@0.2.14
+
 ## 0.7.1
 
 ### Patch Changes

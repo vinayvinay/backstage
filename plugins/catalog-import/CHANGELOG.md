@@ -1,5 +1,31 @@
 # @backstage/plugin-catalog-import
 
+## 0.4.4
+
+### Patch Changes
+
+- a0dacc184: Use title form field value for the commit message on catalog import PRs. Also allow customization of the pull requests title or body only. For example:
+
+  ```tsx
+  <Route
+    path="/catalog-import"
+    element={
+      <CatalogImportPage
+        pullRequest={{
+          preparePullRequest: () => ({
+            title: 'chore: add backstage catalog file [skip ci]',
+          }),
+        }}
+      />
+    }
+  />
+  ```
+
+- Updated dependencies [8686eb38c]
+- Updated dependencies [8686eb38c]
+  - @backstage/catalog-client@0.3.8
+  - @backstage/core@0.7.2
+
 ## 0.4.3
 
 ### Patch Changes

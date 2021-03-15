@@ -1,5 +1,14 @@
 # @backstage/plugin-kubernetes-backend
 
+## 0.3.1
+
+### Patch Changes
+
+- 1f98a6ff8: Filter out k8s cluster with no resources or errors
+- Updated dependencies [8686eb38c]
+- Updated dependencies [8686eb38c]
+  - @backstage/backend-common@0.6.0
+
 ## 0.3.0
 
 ### Minor Changes

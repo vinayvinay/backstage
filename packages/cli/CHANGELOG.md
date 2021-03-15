@@ -1,5 +1,11 @@
 # @backstage/cli
 
+## 0.6.5
+
+### Patch Changes
+
+- 84972540b: Lint storybook files, i.e. `*.stories.*`, as if they were tests.
+
 ## 0.6.4
 
 ### Patch Changes

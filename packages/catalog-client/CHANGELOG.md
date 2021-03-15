@@ -1,5 +1,11 @@
 # @backstage/catalog-client
 
+## 0.3.8
+
+### Patch Changes
+
+- 8686eb38c: Throw the new `ResponseError` from `@backstage/errors`
+
 ## 0.3.7
 
 ### Patch Changes

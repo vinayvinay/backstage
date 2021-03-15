@@ -1,5 +1,11 @@
 # @backstage/core-api
 
+## 0.2.14
+
+### Patch Changes
+
+- c8b54c370: Added new Docs Icon to Core Icons
+
 ## 0.2.13
 
 ### Patch Changes

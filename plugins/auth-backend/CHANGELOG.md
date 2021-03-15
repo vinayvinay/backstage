@@ -1,5 +1,16 @@
 # @backstage/plugin-auth-backend
 
+## 0.3.5
+
+### Patch Changes
+
+- 8686eb38c: Use errors from `@backstage/errors`
+- Updated dependencies [8686eb38c]
+- Updated dependencies [8686eb38c]
+- Updated dependencies [8686eb38c]
+  - @backstage/catalog-client@0.3.8
+  - @backstage/backend-common@0.6.0
+
 ## 0.3.4
 
 ### Patch Changes

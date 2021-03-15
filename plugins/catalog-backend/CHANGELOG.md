@@ -1,5 +1,14 @@
 # @backstage/plugin-catalog-backend
 
+## 0.6.6
+
+### Patch Changes
+
+- 8686eb38c: Use errors from `@backstage/errors`
+- Updated dependencies [8686eb38c]
+- Updated dependencies [8686eb38c]
+  - @backstage/backend-common@0.6.0
+
 ## 0.6.5
 
 ### Patch Changes
